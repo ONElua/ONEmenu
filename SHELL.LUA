@@ -337,7 +337,7 @@ function rungameboot(pathtogame)
 	local pic=image.load("PIC.PNG")
 	local snd= sound.load("SND.S3M")
 
-	local ls = files.listfiles("ms0:/MyRandomGameboot/")--"ms0:/gameboot" change for your path to the pmfs :P 
+	local ls = files.listfiles(files.cdir())--change for your path to the pmfs :P 
 	if ls then
 		local list_pmf={}
 		for i=1,#ls do
