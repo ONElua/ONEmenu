@@ -840,6 +840,15 @@ function onCopyFiles(size,written,file)
     screen.flip()
 end
 
+ -- CallBack DeleteFiles
+function onDeleteFiles(file)
+	if background then background:blit(0,0) end
+	draw.fillrect(0,0,480,24, BarColor)
+    screen.print(15,5,strings.delfile,0.6,color.white,0x0)
+	screen.print(15,25,file,0.6,color.white,0x0)
+	screen.flip()
+end
+
 -- ## Library Scroll ## --
 scroll = {}
 
@@ -1245,7 +1254,7 @@ function ctrls_explorer_menu()
 			while ftp.state() do
 				buttons.read()
 				background:blit(0,0)
-				screen.print(5,5,strings.serverftp..tostring(wlan.getip()),0.6,color.new(255,69,0),color.black)
+				screen.print(5,5,strings.serverftp..tostring(wlan.getip()).. " Port 21",0.6,color.new(255,69,0),color.black)
 				screen.print(5,25,strings.closeftp,0.6,color.new(255,69,0),color.black)
 				screen.flip()
 

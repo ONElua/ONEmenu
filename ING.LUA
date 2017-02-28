@@ -60,6 +60,7 @@ startin=_button.." to start the installation in ",
 --Optios Menu Explorer
 back=" Return ",
 copyfile="Copying File : ",
+delfile="Deleting file : ",
 label="Waiting...\nLoading Image...",
 background="Background: Press Triangle",
 dir="<DIR>",
